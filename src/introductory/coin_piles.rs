@@ -18,12 +18,6 @@ fn coin_piles(piles: &mut [(u64, u64)]) -> Vec<bool> {
     v
 }
 
-#[cfg(test)]
-mod test {
-    use super::*;
-
-    #[test]
-    fn test_1() {
-        assert_eq!(coin_piles(&mut [(11, 4)]), vec![false]);
-    }
+test! {
+    test_1: coin_piles(&mut [(11, 4)]), vec![false],
 }

@@ -1,5 +1,4 @@
-#[allow(dead_code)]
-fn two_sets(n: u64) -> Option<(Vec<u64>, Vec<u64>)> {
+pub fn two_sets(n: u64) -> Option<(Vec<u64>, Vec<u64>)> {
     let total: u64 = (1..=n).sum();
     if total % 2 != 0 {
         return None;
@@ -24,22 +23,8 @@ fn two_sets(n: u64) -> Option<(Vec<u64>, Vec<u64>)> {
     Some((left, right))
 }
 
-#[cfg(test)]
-mod test {
-    use super::*;
-
-    #[test]
-    fn test_1() {
-        assert_eq!(two_sets(1), None);
-    }
-
-    #[test]
-    fn test_2() {
-        assert_eq!(two_sets(2), None);
-    }
-
-    #[test]
-    fn test_3() {
-        assert_eq!(two_sets(3), Some((vec![2, 1], vec![3])));
-    }
+test! {
+    test_1: two_sets(1), None,
+    test_2: two_sets(2), None,
+    test_3: two_sets(3), Some((vec![2, 1], vec![3])),
 }

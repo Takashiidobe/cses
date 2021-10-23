@@ -9,17 +9,7 @@ fn two_knights(n: u64) -> Vec<i64> {
     ans
 }
 
-#[cfg(test)]
-mod test {
-    use super::*;
-
-    #[test]
-    fn test_1() {
-        assert_eq!(two_knights(2), vec![0, 6]);
-    }
-
-    #[test]
-    fn test_2() {
-        assert_eq!(two_knights(1), vec![0]);
-    }
+test! {
+    test_1: two_knights(2), vec![0, 6],
+    test_2: two_knights(1), vec![0],
 }

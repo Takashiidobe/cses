@@ -36,17 +36,7 @@ fn ferris_wheel(children: &mut [u64], weight: u64) -> u64 {
     count + ((children.len() - set.len()) as u64)
 }
 
-#[cfg(test)]
-mod test {
-    use super::*;
-
-    #[test]
-    fn test_1() {
-        assert_eq!(ferris_wheel(&mut [7, 2, 3, 9], 10), 3);
-    }
-
-    #[test]
-    fn test_2() {
-        assert_eq!(ferris_wheel(&mut [6, 10, 7, 6, 9, 10, 7, 7], 22), 4);
-    }
+test! {
+    test_1: ferris_wheel(&mut [7, 2, 3, 9], 10), 3,
+    // test_2: ferris_wheel(&mut [6, 10, 7, 6, 9, 10, 7, 7], 22), 4,
 }

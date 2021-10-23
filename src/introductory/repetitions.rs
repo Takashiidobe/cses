@@ -14,21 +14,8 @@ fn repetitions(chars: Vec<char>) -> u64 {
     total
 }
 
-#[cfg(test)]
-mod test {
-    use super::*;
-
-    #[test]
-    fn test_1() {
-        assert_eq!(repetitions("ATTCGGGA".chars().collect()), 3);
-    }
-    #[test]
-    fn test_2() {
-        assert_eq!(repetitions("ATTTTCGGGA".chars().collect()), 4);
-    }
-
-    #[test]
-    fn test_3() {
-        assert_eq!(repetitions("ATTCGGA".chars().collect()), 2);
-    }
+test! {
+    test_1: repetitions("ATTCGGGA".chars().collect()), 3,
+    test_2: repetitions("ATTTTCGGGA".chars().collect()), 4,
+    test_3: repetitions("ATTCGGA".chars().collect()), 2,
 }

@@ -29,26 +29,18 @@ fn restaurant_customers(times: &[(u64, u64)]) -> u64 {
     max_customers_so_far
 }
 
-#[cfg(test)]
-mod test {
-    use super::*;
-
-    #[test]
-    fn test_1() {
-        assert_eq!(
-            restaurant_customers(&[
-                (1, 2),
-                (3, 4),
-                (5, 6),
-                (7, 8),
-                (9, 10),
-                (11, 12),
-                (13, 14),
-                (15, 16),
-                (17, 18),
-                (19, 20)
-            ]),
-            1
-        )
-    }
+test! {
+    test_1: restaurant_customers(&[
+        (1, 2),
+        (3, 4),
+        (5, 6),
+        (7, 8),
+        (9, 10),
+        (11, 12),
+        (13, 14),
+        (15, 16),
+        (17, 18),
+        (19, 20)
+    ]),
+    1,
 }

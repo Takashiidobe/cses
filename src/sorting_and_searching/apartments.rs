@@ -22,19 +22,11 @@ fn apartments(mut people: Vec<i64>, mut apartments: Vec<i64>, k: i64) -> u64 {
     ans
 }
 
-#[cfg(test)]
-mod test {
-    use super::*;
-
-    #[test]
-    fn test_1() {
-        assert_eq!(
-            apartments(
+test! {
+    test_1: apartments(
                 vec![37, 62, 56, 69, 34, 46, 10, 86, 16, 49],
                 vec![50, 95, 47, 43, 9, 62, 83, 71, 71, 7],
                 0
             ),
-            1
-        )
-    }
+            1,
 }
